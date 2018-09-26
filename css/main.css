@@ -161,7 +161,13 @@ body {
   font-size: 13px;
   color: #21242b;
 }
-
+.d-link{
+  color: #21242b;
+}
+.d-link:hover,.d-link:focus{
+  color: #21242b;
+  text-decoration: none;
+}
 .currency {
   display: -webkit-box;
   display: -webkit-flex;
@@ -190,7 +196,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
+.w-list{
+  top:  60%;
+}
 .logo {
   display: inline-block;
 }
@@ -1492,6 +1500,11 @@ form.comment-form button {
   .magazine-box .news-item img {
     height: 380px;
   }
+  .w-list{
+    min-width: 130px;
+    top: 100%;
+    left: 15px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1500,6 +1513,9 @@ form.comment-form button {
     padding-right: 0;
     padding-left: 0;
     padding-top: 12px;
+  }
+  .w-list {
+    top: 100%;
   }
   .logo img {
     height: 42px;
