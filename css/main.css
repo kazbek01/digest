@@ -325,9 +325,9 @@ body {
   position: fixed;
   left: 0;
   height: 100%;
-  width: 20%;
+  width: 25%;
   background-color: #09245f;
-  padding: 150px 20px 20px 55px;
+  padding: 30px 20px 20px 50px;
 }
 
 .menu-fixed .nav-info {
@@ -341,24 +341,79 @@ body {
   color: white;
   opacity: 1;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .menu-fixed .nav-info li a:hover {
   color: #ff5370;
 }
+.top-fix{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.list-fix{
+  overflow: auto;
+  height: calc(100% - 120px);
+  margin-right: -16px;
+  padding-right: 20px;
+}
+.list-fix::-webkit-scrollbar-track
+{
+  border-radius: 10px;
+  background-color: transparent;
+  /*border: 2px solid #fff;*/
+}
 
+.list-fix::-webkit-scrollbar
+{
+  width: 4px;
+  background-color: transparent;
+}
+.list-fix::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  /*background-color: rgba(0,0,0,.3);*/
+  background-color: white;
+}
+.list-fix .menu{
+  margin-left: 0;
+  display: block;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+.list-fix .menu li a{
+  font-size: 17px;
+  padding: 5px 0;
+  color: white;
+}
+.list-fix .menu li a:hover{
+  color: #ff5370;
+}
 .close {
   background-color: transparent;
   border: none;
   outline: none;
-  position: fixed;
-  left: 3%;
-  top: 5%;
+  margin-right: 15px;
   opacity: 1;
   z-index: 1;
+  float: none;
 }
 
+.logo-fix{
+  display: inline-block;
+}
+.logo-fix img{
+  height: 40px;
+}
 .close:focus {
   outline: none;
 }
@@ -796,28 +851,9 @@ input ::placeholder {
           background-size: 100%;
 }
 
-.logo-bottom {
-  display: inline-block;
-  border: 5px solid white;
-  padding: 5px;
-  text-align: center;
-  color: white;
-  font-family: Lato;
-  font-size: 15px;
-  line-height: 20px;
+.logo-bottom img{
+  height: 57px;
 }
-
-.logo-bottom:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.logo-bottom span {
-  font-weight: bold;
-  font-size: 36px;
-  letter-spacing: 5px;
-}
-
 .c-box {
   padding-top: 30px;
 }
@@ -833,7 +869,7 @@ input ::placeholder {
 
 .show-more {
   position: relative;
-  padding: 10px 25px 10px 15px;
+  padding: 10px 40px 10px 15px;
   background-color: #09245f;
   display: inline-block;
   color: white;
@@ -851,13 +887,14 @@ input ::placeholder {
 }
 
 .load {
-  background: url("../img/icon/reload-symbol.png");
-  width: 16px;
-  height: 16px;
+  background: url("../img/icon/repeat.png");
+  width: 22px;
+  height: 21px;
   margin-left: 5px;
   position: absolute;
   top: 30%;
   right: 4%;
+  background-size: 100%;
 }
 
 .single-page {
@@ -914,7 +951,7 @@ input ::placeholder {
 }
 
 .article-text p {
-  font-family: Lato;
+  font-family: Lato!important;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.33;
@@ -1109,12 +1146,12 @@ form.comment-form button {
 
 .i-pdf {
   background: url("../img/icon/pdf.png");
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 20px;
 }
 
 .download {
-  background: url("../img/icon/down-arrow-in-a-circle.png");
+  background: url("../img/icon/download.png");
   width: 24px;
   height: 24px;
   margin-top: -2px;
@@ -1222,7 +1259,7 @@ form.comment-form button {
     height: 40px;
   }
   .menu-fixed {
-    padding: 80px 20px 20px;
+    padding: 20px 20px 20px;
     width: 100%;
   }
   .menu-fixed .header-top {
@@ -1303,6 +1340,13 @@ form.comment-form button {
   .nav-info li a {
     font-size: 16px;
   }
+  .list-fix{
+    overflow: auto;
+    height: calc(100% - 200px);
+  }
+  .logo-fix img{
+    height: 35px;
+  }
   .main-top {
     padding-left: 15px;
     padding-right: 0;
@@ -1363,7 +1407,7 @@ form.comment-form button {
     padding-top: 5px;
   }
   .search-black {
-    top: 86px;
+    top: 81px;
     right: 22px;
   }
   .category-page {
@@ -1434,6 +1478,7 @@ form.comment-form button {
   }
   .article-box h1.block-title {
     font-size: 22px;
+    font-family: Lato!important;
   }
   .single-page {
     padding-top: 15px;
@@ -1516,8 +1561,11 @@ form.comment-form button {
     width: 30%;
   }
   .menu-fixed {
-    width: 25%;
-    padding: 150px 20px 20px 35px;
+    width: 30%;
+    padding: 30px 20px 20px 35px;
+  }
+  .logo-fix img{
+    height: 40px;
   }
   .article-box h1.block-title {
     font-size: 22px;
